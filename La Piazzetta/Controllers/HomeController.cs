@@ -1,4 +1,5 @@
-﻿using System;
+﻿using La_Piazzetta.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -41,12 +42,22 @@ namespace La_Piazzetta.Controllers
 
         public ActionResult Products()
         {
-
+            List<Product> products = new List<Product>();
+            using (ApplicationDbContext context = new ApplicationDbContext())
+            {
+                products = context.Products.ToList();
+            }
             ViewBag.Message = "Products.";
+
+            return View(products);
+        }
+
+        public ActionResult Orders()
+        {
+            ViewBag.Message = "Orders.";
 
             return View();
         }
-        
         public ActionResult Stock()
         {
             ViewBag.Message = "Stock.";
