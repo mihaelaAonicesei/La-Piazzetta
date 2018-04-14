@@ -13,16 +13,72 @@ namespace La_Piazzetta.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Contact()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your contact page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Menu()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Menu.";
+
+            return View();
+        }
+        public ActionResult Loyality()
+        {
+            ViewBag.Message = "Loyality.";
+
+            return View();
+        }
+        public ActionResult DIY()
+        {
+            ViewBag.Message = "DIY.";
+
+            return View();
+        }
+
+        public ActionResult Products()
+        {
+
+            ViewBag.Message = "Products.";
+
+            return View();
+        }
+        public ActionResult Orders()
+        {
+            ViewBag.Message = "Orders.";
+
+            return View();
+        }
+        public ActionResult Stock()
+        {
+            ViewBag.Message = "Stock.";
+
+            return View();
+        }
+        public ActionResult Vendors()
+        {
+            ViewBag.Message = "Vendors.";
+
+            return View();
+        }
+        public ActionResult Reports()
+        {
+            ViewBag.Message = "Reports.";
+
+            return View();
+        }
+        public ActionResult BA()
+        {
+            ViewBag.Message = "BA.";
+
+            return View();
+        }
+        public ActionResult Help()
+        {
+            ViewBag.Message = "Help.";
 
             return View();
         }
