@@ -46,12 +46,7 @@ namespace La_Piazzetta.Controllers
 
             return View();
         }
-        public ActionResult Orders()
-        {
-            ViewBag.Message = "Orders.";
-
-            return View();
-        }
+        
         public ActionResult Stock()
         {
             ViewBag.Message = "Stock.";

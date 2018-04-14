@@ -53,12 +53,21 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -184,17 +193,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiControllers\IngredientsApiController.cs" />
+    <Compile Include="ApiControllers\OrderApiController.cs" />
+    <Compile Include="ApiControllers\PackagesApiController.cs" />
+    <Compile Include="ApiControllers\ProductsApiController.cs" />
+    <Compile Include="ApiControllers\ReceiptApiController.cs" />
+    <Compile Include="ApiControllers\VendorsApiController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\ReceiptHandler.cs" />
+    <Compile Include="Handlers\VendorHandler.cs" />
+    <Compile Include="Managers\ReceiptManager.cs" />
+    <Compile Include="Managers\VendorManager.cs" />
+    <Compile Include="ViewModels\AllPackagesViewModel.cs" />
+    <Compile Include="Handlers\IngredientHandler.cs" />
+    <Compile Include="Handlers\PackagesHandler.cs" />
+    <Compile Include="Handlers\ProductHandler.cs" />
+    <Compile Include="Managers\IngredientManager.cs" />
+    <Compile Include="Managers\OrderManager.cs" />
+    <Compile Include="Managers\PackagesManager.cs" />
+    <Compile Include="Managers\ProductManager.cs" />
     <Compile Include="Migrations\201804141119015_InitialMigration.cs" />
     <Compile Include="Migrations\201804141119015_InitialMigration.Designer.cs">
       <DependentUpon>201804141119015_InitialMigration.cs</DependentUpon>
@@ -204,6 +235,7 @@
       <DependentUpon>201804141121109_PersonNUserLink.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Handlers\OrderHandler.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -221,6 +253,12 @@
     <Compile Include="Models\Vote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AllIngredientsViewModel.cs" />
+    <Compile Include="ViewModels\AllOrdersViewModel.cs" />
+    <Compile Include="ViewModels\AllProductsViewModel.cs" />
+    <Compile Include="ViewModels\AllReceiptCommentsViewModel.cs" />
+    <Compile Include="ViewModels\AllReceiptsViewModel.cs" />
+    <Compile Include="ViewModels\AllVendorsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -281,10 +319,10 @@
     <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Home\Loyality.cshtml" />
     <Content Include="Views\Home\DIY.cshtml" />
-    <Content Include="Views\Home\Products.cshtml" />
-    <Content Include="Views\Home\Orders.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Home\Stock.cshtml" />
-    <Content Include="Views\Home\Vendors.cshtml" />
+    <Content Include="Views\Vendor\Index.cshtml" />
     <Content Include="Views\Home\Reports.cshtml" />
     <Content Include="Views\Home\BA.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
