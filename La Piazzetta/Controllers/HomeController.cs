@@ -1,9 +1,4 @@
-﻿using La_Piazzetta.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace La_Piazzetta.Controllers
 {
@@ -28,6 +23,12 @@ namespace La_Piazzetta.Controllers
 
             return View();
         }
+
+        public ActionResult Stock()
+        {
+            ViewBag.Message = "Stock.";
+            return View();
+        }
         public ActionResult Loyality()
         {
             ViewBag.Message = "Loyality.";
@@ -37,37 +38,6 @@ namespace La_Piazzetta.Controllers
         public ActionResult DIY()
         {
             ViewBag.Message = "DIY.";
-
-            return View();
-        }
-
-        public ActionResult Products()
-        {
-            List<Product> products = new List<Product>();
-            using (ApplicationDbContext context = new ApplicationDbContext())
-            {
-                products = context.Products.ToList();
-            }
-            ViewBag.Message = "Products.";
-
-            return View(products);
-        }
-
-        public ActionResult Orders()
-        {
-            ViewBag.Message = "Orders.";
-
-            return View();
-        }
-        public ActionResult Stock()
-        {
-            ViewBag.Message = "Stock.";
-
-            return View();
-        }
-        public ActionResult Vendors()
-        {
-            ViewBag.Message = "Vendors.";
 
             return View();
         }

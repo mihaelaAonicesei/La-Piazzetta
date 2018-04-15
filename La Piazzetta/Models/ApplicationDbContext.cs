@@ -8,6 +8,13 @@ namespace La_Piazzetta.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.CreateIfNotExists();
+        }
+
+        public ApplicationDbContext(string connString)
+            : base(connString, throwIfV1Schema: false)
+        {
+            Database.CreateIfNotExists();
         }
 
         public DbSet<Comment> Comments { get; set; }
