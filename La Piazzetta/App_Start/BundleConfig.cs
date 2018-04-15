@@ -26,6 +26,17 @@ namespace La_Piazzetta
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/smallBanner").Include(
+                      "~/Content/smallBanner.css"));
+
+            bundles.Add(new StyleBundle("~/Content/products").Include(
+                    "~/Content/products.css"
+                ));
+
+            bundles.Add(new StyleBundle("~/Content/home").Include(
+                   "~/Content/index.css"
+               ));
         }
     }
 }
