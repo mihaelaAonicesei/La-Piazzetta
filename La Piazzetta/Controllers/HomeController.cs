@@ -6,6 +6,7 @@ namespace La_Piazzetta.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "La Piazzetta";
             return View();
         }
 
