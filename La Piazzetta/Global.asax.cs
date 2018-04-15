@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using La_Piazzetta.Models;
 
 namespace La_Piazzetta
 {
@@ -14,6 +15,11 @@ namespace La_Piazzetta
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);//MVC 2nd
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                new ApplicationDbContextInitializer(ctx);
+            }
         }
     }
 }

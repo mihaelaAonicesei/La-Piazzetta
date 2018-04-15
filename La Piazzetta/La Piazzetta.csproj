@@ -218,6 +218,11 @@
     <Compile Include="Handlers\VendorHandler.cs" />
     <Compile Include="Managers\ReceiptManager.cs" />
     <Compile Include="Managers\VendorManager.cs" />
+    <Compile Include="Migrations\201804151016259_Initial.cs" />
+    <Compile Include="Migrations\201804151016259_Initial.Designer.cs">
+      <DependentUpon>201804151016259_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApplicationDbContextInitializer.cs" />
     <Compile Include="ViewModels\AllPackagesViewModel.cs" />
     <Compile Include="Handlers\IngredientHandler.cs" />
     <Compile Include="Handlers\PackagesHandler.cs" />
@@ -226,14 +231,6 @@
     <Compile Include="Managers\OrderManager.cs" />
     <Compile Include="Managers\PackagesManager.cs" />
     <Compile Include="Managers\ProductManager.cs" />
-    <Compile Include="Migrations\201804141119015_InitialMigration.cs" />
-    <Compile Include="Migrations\201804141119015_InitialMigration.Designer.cs">
-      <DependentUpon>201804141119015_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804141121109_PersonNUserLink.cs" />
-    <Compile Include="Migrations\201804141121109_PersonNUserLink.Designer.cs">
-      <DependentUpon>201804141121109_PersonNUserLink.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Handlers\OrderHandler.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -284,7 +281,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -345,11 +344,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804141119015_InitialMigration.resx">
-      <DependentUpon>201804141119015_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804141121109_PersonNUserLink.resx">
-      <DependentUpon>201804141121109_PersonNUserLink.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804151016259_Initial.resx">
+      <DependentUpon>201804151016259_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -22,6 +22,12 @@ namespace La_Piazzetta.Controllers
 
             return View();
         }
+
+        public ActionResult Stock()
+        {
+            ViewBag.Message = "Stock.";
+            return View();
+        }
         public ActionResult Loyality()
         {
             ViewBag.Message = "Loyality.";
