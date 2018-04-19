@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    <style rel="stylesheet" type="text/css" href="../../Content/products.css"></style>
     @Styles.Render("~/Content/css")
 
     @RenderSection("Styles", false)
@@ -19,8 +20,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                    <img style="height: 30px;" src="@Url.Content("~/images/logo.png")">
+                <a class="navbar-brand" href="@Url.Action(" Index", "Home" )">
+                    <img style="height: 30px;" src="@Url.Content(" ~/images/logo.png")">
                 </a>
             </div>
             <div class="navbar-collapse collapse">
@@ -28,44 +29,44 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @if (!(User.IsInRole("Admin") || User.IsInRole("Manage") || User.IsInRole("Employee")))
                     {
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     }
                     <li>@Html.ActionLink("Menu", "Menu", "Home")</li>
 
                     @if (User.IsInRole("Customer"))
                     {
-                        <li>@Html.ActionLink("Loyality", "Loyality", "Home")</li>
+                    <li>@Html.ActionLink("Loyality", "Loyality", "Home")</li>
                     }
 
                     @if (User.IsInRole("Customer") || User.IsInRole("Admin"))
                     {
-                        <li>@Html.ActionLink("DIY", "DIY", "Home")</li>
+                    <li>@Html.ActionLink("DIY", "DIY", "Home")</li>
                     }
 
                     @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
                     {
-                        <li>@Html.ActionLink("Products", "Index", "Product")</li>
+                    <li>@Html.ActionLink("Products", "Index", "Product")</li>
                     }
 
                     @if (!(User.IsInRole("Admin") || User.IsInRole("Manage") || User.IsInRole("Employee")))
                     {
-                        <li>@Html.ActionLink("Orders", "Index", "Order")</li>
+                    <li>@Html.ActionLink("Orders", "Index", "Order")</li>
                     }
                     @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
                     {
-                        <li>@Html.ActionLink("Stock", "Stock", "Home")</li>
+                    <li>@Html.ActionLink("Stock", "Stock", "Home")</li>
                     }
 
                     @if (User.IsInRole("Manager"))
                     {
-                        <li>@Html.ActionLink("Vendors", "Index", "Vendor")</li>
+                    <li>@Html.ActionLink("Vendors", "Index", "Vendor")</li>
                     }
 
 
                     @if (User.IsInRole("Manager"))
                     {
-                        <li>@Html.ActionLink("BA", "BA", "Home")</li>
-                        <li>@Html.ActionLink("Reports", "Reports", "Home")</li>
+                    <li>@Html.ActionLink("BA", "BA", "Home")</li>
+                    <li>@Html.ActionLink("Reports", "Reports", "Home")</li>
                     }
 
                     <li>@Html.ActionLink("Help", "Help", "Home")</li>
@@ -85,5 +86,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="/Scripts/custom/products.js"></script>
 </body>
 </html>

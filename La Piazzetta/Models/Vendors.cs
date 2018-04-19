@@ -6,6 +6,7 @@ namespace La_Piazzetta.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<Ingredient> Ingredients { get; set; }
+        public string Address { get; set; }
+        public virtual List<Ingredient> Ingredients { get; set; }
     }
 }
