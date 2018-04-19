@@ -45,5 +45,10 @@ namespace La_Piazzetta.Handlers
         {
             await ingredientManager.AddIngredient(ingredient);
         }
+
+        public Ingredient GetById(int id)
+        {
+            return ingredientManager.GetById(id);
+        }
     }
 }

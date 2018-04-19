@@ -238,9 +238,7 @@ C:\La Piazzetta - remote\La Piazzetta\obj\Debug\La Piazzetta.csproj.CoreCompileI
 C:\La Piazzetta - remote\La Piazzetta\obj\Debug\La Piazzetta.csproj.CopyComplete
 C:\La Piazzetta - remote\La Piazzetta\obj\Debug\La Piazzetta.dll
 C:\La Piazzetta - remote\La Piazzetta\obj\Debug\La Piazzetta.pdb
-C:\La Piazzetta - remote\La Piazzetta\obj\Debug\La_Piazzetta.Migrations.InitialMigration.resources
 C:\La Piazzetta - remote\La Piazzetta\obj\Debug\La Piazzetta.csproj.GenerateResource.cache
-C:\La Piazzetta - remote\La Piazzetta\obj\Debug\La_Piazzetta.Migrations.PersonNUserLink.resources
 C:\Users\salbisteanu\Desktop\La-Piazzetta\La Piazzetta\bin\ApplicationInsights.config
 C:\Users\salbisteanu\Desktop\La-Piazzetta\La Piazzetta\bin\La Piazzetta.dll.config
 C:\Users\salbisteanu\Desktop\La-Piazzetta\La Piazzetta\bin\La Piazzetta.dll
@@ -495,3 +493,10 @@ D:\La Piazzetta\La Piazzetta\bin\Microsoft.AI.WindowsServer.xml
 D:\La Piazzetta\La Piazzetta\bin\Microsoft.AI.Web.xml
 D:\La Piazzetta\La Piazzetta\obj\Debug\La_Piazzetta.Migrations.abc.resources
 D:\La Piazzetta\La Piazzetta\obj\Debug\La Piazzetta.csproj.GenerateResource.Cache
+C:\La Piazzetta - remote\La Piazzetta\bin\System.Net.Http.Formatting.dll
+C:\La Piazzetta - remote\La Piazzetta\bin\System.Web.Http.dll
+C:\La Piazzetta - remote\La Piazzetta\bin\System.Web.Http.WebHost.dll
+C:\La Piazzetta - remote\La Piazzetta\bin\System.Net.Http.Formatting.xml
+C:\La Piazzetta - remote\La Piazzetta\bin\System.Web.Http.xml
+C:\La Piazzetta - remote\La Piazzetta\bin\System.Web.Http.WebHost.xml
+C:\La Piazzetta - remote\La Piazzetta\obj\Debug\La_Piazzetta.Migrations.abc.resources

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using La_Piazzetta.Managers;
 using La_Piazzetta.Models;
 using La_Piazzetta.ViewModels;
@@ -64,6 +65,11 @@ namespace La_Piazzetta.Handlers
         public void SaveFavouriteReceiptForUser(int receiptId, int userId)
         {
             receiptManager.SaveReceiptAsFavouriteForUser(receiptId, userId);
+        }
+
+        public void  AddReceipt(Receipt receipt)
+        {
+            receiptManager.AddReceipt(receipt);
         }
     }
 }

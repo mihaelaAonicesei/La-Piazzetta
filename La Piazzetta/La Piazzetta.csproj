@@ -226,6 +226,7 @@
       <DependentUpon>201804190708283_abc.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ApplicationDbContextInitializer.cs" />
+    <Compile Include="Models\DIYViewModel.cs" />
     <Compile Include="Models\ProductsPageModel.cs" />
     <Compile Include="ViewModels\AllPackagesViewModel.cs" />
     <Compile Include="Handlers\IngredientHandler.cs" />
@@ -264,6 +265,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Scripts\custom\diy.js" />
     <Content Include="Content\index.css" />
     <Content Include="Content\products.css" />
     <Content Include="Content\smallBanner.css" />
@@ -273,7 +275,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\carr2.jpg" />
     <Content Include="images\carr3.png" />
+    <Content Include="images\cart.png" />
     <Content Include="images\carusel1.jpg" />
+    <Content Include="images\ingredients.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\phones.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -282,6 +286,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\custom\order.js" />
+    <Content Include="Scripts\custom\payment.js" />
     <Content Include="Scripts\custom\products.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -341,6 +347,7 @@
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\Shared\BigSlider.cshtml" />
     <Content Include="Views\Shared\SmallSlider.cshtml" />
+    <Content Include="Views\DIY\PlaceOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,6 +15,14 @@ namespace La_Piazzetta.Managers
             }
         }
 
+        public Ingredient GetById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                return ctx.Ingredients.FirstOrDefault(x => x.Id == id);
+            }
+        }
+
         public async Task AddIngredient(Ingredient ingredient)
         {
             using (var ctx = new ApplicationDbContext())

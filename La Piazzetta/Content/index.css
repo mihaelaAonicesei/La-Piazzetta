@@ -179,7 +179,8 @@ body {
     padding-top: 12px;
     border-width: 3px;
     border-style: solid;
-    border-radius: 2px;
+    border-radius: 10px;
+    background-color: lightgrey;
     border-color: transparent;
 }
 
@@ -197,6 +198,8 @@ body {
     letter-spacing: 1px;
     color: orange;
     cursor: move;
+    background-color: grey;
+    border-radius:10px;
 }
 
     .widget-head:before, .widget-head:after {
@@ -258,12 +261,12 @@ body {
 
 .widgets {
   position: relative;
-  height: 875px;
-  background: #dddddd;
 }
 
 figure {
-  margin: 0;
+    margin: 0;
+    width: 460px;
+    float: left;
 }
 figure::after {
   clear: both;
@@ -279,10 +282,13 @@ figure figcaption {
   padding: 2.25em 2.5em 0;
 }
 @media only screen and (min-width: 815px) {
-  figure figcaption {
-    float: left;
-    width: 55%;
-  }
+    figure figcaption {
+        float: left;
+        width: 60%;
+        margin-top: 0;
+        padding-top: 0;
+        float: left;
+    }
 }
 figure figcaption h3, figure figcaption .tag {
   font-family: 'Playfair Display', serif;
@@ -290,7 +296,6 @@ figure figcaption h3, figure figcaption .tag {
 figure figcaption h3 {
   margin: 0;
   font-size: 2em;
-  font-weight: 700;
   color: #3b3b3b;
 }
 figure figcaption .tag {
@@ -315,4 +320,60 @@ figure figcaption .rating .fa {
 }
 figure figcaption .rating .fa:last-child {
   margin-right: 0;
+}
+
+
+
+
+/* Padding - just for asthetics on Bootsnipp.com */
+body {
+    margin-top: 20px;
+}
+
+/* CSS for Credit Card Payment form */
+.credit-card-box .panel-title {
+    display: inline;
+    font-weight: bold;
+}
+
+.credit-card-box .form-control.error {
+    border-color: red;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
+}
+
+.credit-card-box label.error {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+}
+
+.credit-card-box .payment-errors {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+}
+
+.credit-card-box label {
+    display: block;
+}
+/* The old "center div vertically" hack */
+.credit-card-box .display-table {
+    display: table;
+}
+
+.credit-card-box .display-tr {
+    display: table-row;
+}
+
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+/* Just looks nicer */
+.credit-card-box .panel-heading img {
+    min-width: 180px;
 }

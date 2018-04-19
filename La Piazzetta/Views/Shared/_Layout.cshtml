@@ -30,44 +30,44 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @if (!(User.IsInRole("Admin") || User.IsInRole("Manage") || User.IsInRole("Employee")))
                     {
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     }
                     <li>@Html.ActionLink("Menu", "Menu", "Home")</li>
 
                     @if (User.IsInRole("Customer"))
                     {
-                    <li>@Html.ActionLink("Loyality", "Loyality", "Home")</li>
+                        <li>@Html.ActionLink("Loyality", "Loyality", "Home")</li>
                     }
 
                     @if (User.IsInRole("Customer") || User.IsInRole("Admin"))
                     {
-                    <li>@Html.ActionLink("DIY", "DIY", "DIY")</li>
+                        <li>@Html.ActionLink("DIY", "DIY", "DIY")</li>
                     }
 
                     @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
                     {
-                    <li>@Html.ActionLink("Products", "Index", "Product")</li>
+                        <li>@Html.ActionLink("Products", "Index", "Product")</li>
                     }
 
                     @if (!(User.IsInRole("Admin") || User.IsInRole("Manage") || User.IsInRole("Employee")))
                     {
-                    <li>@Html.ActionLink("Orders", "Index", "Order")</li>
+                        <li>@Html.ActionLink("Orders", "Index", "Order")</li>
                     }
                     @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
                     {
-                    <li>@Html.ActionLink("Stock", "Stock", "Home")</li>
+                        <li>@Html.ActionLink("Stock", "Stock", "Home")</li>
                     }
 
                     @if (User.IsInRole("Manager"))
                     {
-                    <li>@Html.ActionLink("Vendors", "Index", "Vendor")</li>
+                        <li>@Html.ActionLink("Vendors", "Index", "Vendor")</li>
                     }
 
 
                     @if (User.IsInRole("Manager"))
                     {
-                    <li>@Html.ActionLink("BA", "BA", "Home")</li>
-                    <li>@Html.ActionLink("Reports", "Reports", "Home")</li>
+                        <li>@Html.ActionLink("BA", "BA", "Home")</li>
+                        <li>@Html.ActionLink("Reports", "Reports", "Home")</li>
                     }
 
                     <li>@Html.ActionLink("Help", "Help", "Home")</li>
@@ -87,6 +87,15 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script src="../../Scripts/jquery-1.10.2.js"></script>
+    <script src="../../Scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script src="/Scripts/custom/products.js"></script>
+    <script src="/Scripts/custom/diy.js"></script>
+    <script src="/Scripts/custom/payment.js"></script>
+    <script src="/Scripts/custom/order.js"></script>
 </body>
 </html>

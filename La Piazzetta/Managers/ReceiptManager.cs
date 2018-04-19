@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using La_Piazzetta.Models;
 
 namespace La_Piazzetta.Managers
@@ -52,6 +53,15 @@ namespace La_Piazzetta.Managers
                     Receipt = receipt,
                     Person = person
                 });
+            }
+        }
+
+        public void  AddReceipt(Receipt receipt)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Receipts.Add(receipt);
+                ctx.SaveChangesAsync();
             }
         }
     }
