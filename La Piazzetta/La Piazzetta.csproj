@@ -207,6 +207,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BigSliderController.cs" />
+    <Compile Include="Controllers\DIYController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SmallSliderController.cs" />
@@ -330,7 +331,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Home\Loyality.cshtml" />
-    <Content Include="Views\Home\DIY.cshtml" />
+    <Content Include="Views\DIY\DIY.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Home\Stock.cshtml" />
