@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "DIY";
+}
+
+@model List<La_Piazzetta.Models.Ingredient>
+    
+<script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script>
+<script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script>
+<script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'>
+    
+</script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+<link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+<link rel="canonical" href="https://codepen.io/pongstr/pen/ByqwOX?depth=everything&limit=all&order=popularity&page=22&q=markdown+&show_forks=false" />
+
+@section Styles {
+    <link href="@Url.Content("~/Content/index.css")" rel="stylesheet" type="text/css" />
+}
+@Styles.Render("~/Content/index.css")
+
+<h2>Do it yourself - Create your own pizza receipt</h2>
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel='stylesheet prefetch' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<div style="clear: both"></div>
+    <div class='widgets'>
+        <div class='cycle-slideshow' data-cycle-allow-wrap='true' data-cycle-fx='carousel' data-cycle-next='#next' data-cycle-pager-template="<a href='#' class='thumb'><img src='{{children.0.src}}'></a>" data-cycle-pager='#thumbnails' data-cycle-prev='#prev' data-cycle-slides='figure' data-cycle-timeout='0'>
+            <figure>
+                <img alt='A Taste of the Kitchen' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/first-course.jpg'>
+                <figcaption>
+                    <h3>A Taste of the Kitchen</h3>
+                    <span class='tag'>Served Family Style</span>
+                    <p>Possimus deserunt nisi perferendis, consequuntur odio et aperiam, est, dicta dolor itaque sunt laborum, magni qui optio.</p>
+                    <div class='rating'>
+                        <span class='fa fa-star'></span>
+                        <span class='fa fa-star'></span>
+                        <span class='fa fa-star'></span>
+                        <span class='fa fa-star'></span>
+                        <span class='fa fa-star'></span>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img alt='Rustic Reds' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/second-course.jpg'>
+                <figcaption>
+                    <h3>Rustic Reds</h3>
+                    <span class='tag'>From the land of Italy</span>
+                    <p>Totam at eius excepturi deleniti sed, error repellat itaque omnis maiores tempora ratione dolor velit minus porro aspernatur repudiandae.</p>
+                    <div class='rating'>
+                        <span class='fa fa-star'></span>
+                        <span class='fa fa-star'></span>
+                        <span class='fa fa-star'></span>
+                        <span class='fa fa-star-o'></span>
+                        <span class='fa fa-star-o'></span>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+<div class='widget-container' style="min-height: 80px;" id='bootstrap'>
+    <div class='widget'>
+        <div class='widget-head'>•</div>
+        <div class='widget-body-table'>
+            <div class='widget-body-content'>
+                <span>gfdg</span>
+            </div>
+        </div>
+    </div>
+    <div class='widget'>
+        <div class='widget-head'>•</div>
+        <div class='widget-body-table'>
+            <div class='widget-body-content'>
+                <span>gg</span>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class='widget-container' style="min-height: 80px;" id='foundation'>
+    <div class='widget'>
+        <div class='widget-head'>•</div>
+        <div class='widget-body-table'>
+            <div class='widget-body-content'>
+                <span>Blat</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../Scripts/jquery-1.10.2.js"></script>
+<script src="../../Scripts/jquery-ui.js"></script>
+<script >(function() {
+        $('#bootstrap, #foundation').sortable({
+            placeholder: 'placeholder',
+            connectWith: '.widget-container',
+            handle: '.widget-head',
+            cursor: 'move'
+        });
+
+    }).call(this);
+
+</script>
