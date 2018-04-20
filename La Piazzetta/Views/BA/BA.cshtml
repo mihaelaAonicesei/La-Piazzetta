@@ -1,0 +1,54 @@
+﻿@model La_Piazzetta.ViewModels.Charts.ChartProducts
+
+@Styles.Render("~/Content/reports")
+<h2>BA</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="card card-inverse card-info">
+                <img class="card-img-top" src="../../images/ingredients.png">
+                <div class="card-block">
+                    <figure class="profile profile-inline">
+                        <img src="../../images/ingredients.png" class="profile-avatar" alt="">
+                    </figure>
+                    <h4 class="card-title">Top Products</h4>
+                    <div class="card-text">
+                        Find useful information about the most ordered products.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">
+                        View Chart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+            <div class="card card-inverse card-info">
+                <img class="card-img-top" src="../../images/employee.png">
+                <div class="card-block">
+                    <figure class="profile profile-inline">
+                        <img src="../../employee.png" class="profile-avatar" alt="">
+                    </figure>
+                    <h4 class="card-title">Employees Report</h4>
+                    <div class="card-text">
+                        Find useful information about employees.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info btn-sm">View report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="margin: auto !important;">
+        <div class="modal-content">
+            <div class="modal-body">
+                @Html.Partial("ProductsChart", Model.OrderData)
+            </div>
+        </div>
+    </div>
+</div>

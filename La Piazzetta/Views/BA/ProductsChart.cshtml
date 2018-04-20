@@ -1,0 +1,55 @@
+﻿@model La_Piazzetta.ViewModels.Charts.OrderChartData
+
+<div style="min-width:635px;min-height:317px;">
+    <canvas id="myChart"></canvas>
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+<script type="text/javascript" defer="defer">
+    var ctx = document.getElementById("myChart").getContext('2d');
+
+    var dataItems = [];
+    var dataValues = [];
+    @foreach (var item in Model.Items)
+    {
+        @:dataItems.push("@item.Name");
+        @:dataValues.push(@item.Value);
+    }
+
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: dataItems,
+            datasets: [{
+                label: '# of Orders',
+                    data: dataValues,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>

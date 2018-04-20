@@ -206,6 +206,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BAController.cs" />
     <Compile Include="Controllers\BigSliderController.cs" />
     <Compile Include="Controllers\DIYController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -218,8 +219,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\BAHandler.cs" />
     <Compile Include="Handlers\ReceiptHandler.cs" />
     <Compile Include="Handlers\VendorHandler.cs" />
+    <Compile Include="Managers\BAManager.cs" />
     <Compile Include="Managers\ReceiptManager.cs" />
     <Compile Include="Managers\VendorManager.cs" />
     <Compile Include="Migrations\201804190708283_abc.cs" />
@@ -262,6 +265,9 @@
     <Compile Include="ViewModels\AllReceiptCommentsViewModel.cs" />
     <Compile Include="ViewModels\AllReceiptsViewModel.cs" />
     <Compile Include="ViewModels\AllVendorsViewModel.cs" />
+    <Compile Include="ViewModels\Charts\ChartProductItem.cs" />
+    <Compile Include="ViewModels\Charts\ChartProducts.cs" />
+    <Compile Include="ViewModels\Charts\OrderChartData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -348,13 +354,13 @@
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Home\Stock.cshtml" />
     <Content Include="Views\Vendor\Index.cshtml" />
-    <Content Include="Views\Home\Reports.cshtml" />
-    <Content Include="Views\Home\BA.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\Shared\BigSlider.cshtml" />
     <Content Include="Views\Shared\SmallSlider.cshtml" />
     <Content Include="Views\DIY\PlaceOrder.cshtml" />
     <Content Include="Views\Reports\Reports.cshtml" />
+    <Content Include="Views\BA\BA.cshtml" />
+    <Content Include="Views\BA\ProductsChart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
