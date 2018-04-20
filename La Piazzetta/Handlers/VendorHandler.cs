@@ -33,13 +33,9 @@ namespace La_Piazzetta.Handlers
             vendorManager = new VendorManager();
         }
 
-        public AllVendorsViewModel GetAll()
+        public List<Vendors> GetAll()
         {
-            var models = vendorManager.GetAll();
-            return new AllVendorsViewModel
-            {
-                Vendors = models
-            };
+            return vendorManager.GetAll().ToList();
         }
 
         public async Task Add(Vendors newVendor)

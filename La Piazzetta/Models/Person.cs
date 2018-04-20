@@ -6,7 +6,7 @@ namespace La_Piazzetta.Models
     public class Person
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
         public string Name { get; set; }
         public string PhoneNumber { get; set; }

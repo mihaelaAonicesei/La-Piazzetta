@@ -628,3 +628,6 @@ C:\Users\Diana\Desktop\La Piazzetta final\La Piazzetta\obj\Debug\La Piazzetta.cs
 C:\Users\Diana\Desktop\La Piazzetta final\La Piazzetta\obj\Debug\La Piazzetta.csproj.CopyComplete
 C:\Users\Diana\Desktop\La Piazzetta final\La Piazzetta\obj\Debug\La Piazzetta.dll
 C:\Users\Diana\Desktop\La Piazzetta final\La Piazzetta\obj\Debug\La Piazzetta.pdb
+C:\Users\Diana\Desktop\La Piazzetta final\La Piazzetta\obj\Debug\La_Piazzetta.Migrations.addemployees.resources
+C:\Users\Diana\Desktop\La Piazzetta final\La Piazzetta\obj\Debug\La_Piazzetta.Migrations.addvendors.resources
+C:\Users\Diana\Desktop\La Piazzetta final\La Piazzetta\obj\Debug\La_Piazzetta.Migrations.changeuseridinperson.resources
