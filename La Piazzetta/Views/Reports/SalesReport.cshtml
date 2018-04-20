@@ -12,20 +12,21 @@
     </thead>
     <tbody>
         @foreach (var em in Model)
-        {
-            <tr>
-                <td>@em.Id</td>
-                <td>@em.OrderDate</td>
-                <td>
-                    @foreach (var prod in em.OrderedProducts)
-                    {
-                        <span>@prod.Product.Name</span> 
-                        <span> - </span> 
-                        <span>@prod.Quantity</span>
-                        <br />
-                    }
-                </td>
-            </tr>
+    {
+        <tr>
+            <td>@em.Id</td>
+            <td>@em.OrderDate</td>
+            <td>
+                @foreach (var prod in em.OrderedProducts)
+            {
+                <span>@prod.Product.Name</span>
+                <span> - </span>
+                <span>@prod.Quantity</span>
+                <br />
         }
+            </td>
+        </tr>
+}
+
     </tbody>
 </table>
