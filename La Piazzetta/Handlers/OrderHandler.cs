@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using La_Piazzetta.Managers;
 using La_Piazzetta.Models;
@@ -33,13 +34,9 @@ namespace La_Piazzetta.Handlers
             orderManager = new OrderManager();
         }
 
-        public AllOrdersViewModel GetAllOrders()
+        public List<Order> GetAllOrders()
         {
-            var orders = orderManager.GetAll();
-            return new AllOrdersViewModel
-            {
-                Orders = orders
-            };
+            return orderManager.GetAll().ToList();
         }
 
         public int GetTotalAmountForOrder(int id)
