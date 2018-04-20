@@ -1,44 +1,30 @@
-﻿@model List<La_Piazzetta.Models.Ingredient>
+﻿@model List<La_Piazzetta.Models.Order>
 
-<h2 style="font-family: 'Playfair Display', serif; font-weight: 600">Sales Report</h2>
+<h2 style="font-family: 'Playfair Display', serif; font-weight: 600">Stock Report</h2>
 
 <table id="example" class="table table-striped table-bordered" style="width:100%">
     <thead>
         <tr>
-            <th>Ingredient Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Measure Unit</th>
-            <th>Expiry date</th>
-            <th>Vendor</th>
+            <th>Order Id</th>
+            <th>Order Date</th>
+            <th>Products and quantity</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var em in Model)
         {
             <tr>
-                <td>@em.Name</td>
-                <td>@em.Price</td>
-                @if (em.Quantity > 10)
-                {
-                    <td style="color:green; font-weight:600">
-                        @em.Quantity
-                    <img style="height: 30px;" title="The quantity for this product is ok." src="~/images/check.png" />
-                </td> }
-            else
-            {
-                <td style="color:red; font-weight:600">@em.Quantity <img style="height: 20px;" title="This product runs out of stock." src="~/images/exclamation.png" /></td>}
-                <td>@em.MeasureUnit</td>
-                @if (em.ExpiryDate > DateTime.Now)
-                {
-                    <td style="color:green; font-weight:600">
-                        @em.ExpiryDate <img style="height: 30px;" src="~/images/check.png" title="The expiry date for this product is ok." />
-                    </td> }
-                else
-                {
-                    <td style="color:red; font-weight:600">@em.ExpiryDate <img style="height: 20px;" title="The product will expire soon." src="~/images/exclamation.png" /></td>}
-
-                <td>@em.Vendor.Name</td>
+                <td>@em.Id</td>
+                <td>@em.OrderDate</td>
+                <td>
+                    @foreach (var prod in em.OrderedProducts)
+                    {
+                        <span>@prod.Product.Name</span> 
+                        <span> - </span> 
+                        <span>@prod.Quantity</span>
+                        <br />
+                    }
+                </td>
             </tr>
         }
     </tbody>

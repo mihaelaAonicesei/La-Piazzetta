@@ -12,7 +12,7 @@ namespace La_Piazzetta.Managers
         {
             using (var ctx = new ApplicationDbContext())
             {
-                return ctx.Order.ToList();
+                return ctx.Order.Include(x => x.OrderedProducts.Select(y => y.Product)).ToList();
             }
         }
 

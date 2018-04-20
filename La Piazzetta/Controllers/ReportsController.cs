@@ -27,7 +27,7 @@ namespace La_Piazzetta.Controllers
 
         public ActionResult SalesReport()
         {
-            return View(IngredientHandler.Instance.GetAll());
+            return View(OrderHandler.Instance.GetAllOrders());
         }
     }
 }
