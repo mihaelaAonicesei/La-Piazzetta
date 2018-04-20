@@ -37,6 +37,10 @@ namespace La_Piazzetta
             bundles.Add(new StyleBundle("~/Content/home").Include(
                    "~/Content/index.css"
                ));
+
+            bundles.Add(new StyleBundle("~/Content/reports").Include(
+                   "~/Content/reports.css"
+               ));
         }
     }
 }

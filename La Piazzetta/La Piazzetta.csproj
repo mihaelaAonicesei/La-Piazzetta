@@ -210,6 +210,7 @@
     <Compile Include="Controllers\DIYController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\SmallSliderController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -265,6 +266,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\reports.css" />
+    <Content Include="images\employee.png" />
+    <Content Include="images\sales.jpg" />
+    <Content Include="images\stock.png" />
+    <Content Include="images\vendor.png" />
     <Content Include="Scripts\custom\diy.js" />
     <Content Include="Content\index.css" />
     <Content Include="Content\products.css" />
@@ -348,6 +354,7 @@
     <Content Include="Views\Shared\BigSlider.cshtml" />
     <Content Include="Views\Shared\SmallSlider.cshtml" />
     <Content Include="Views\DIY\PlaceOrder.cshtml" />
+    <Content Include="Views\Reports\Reports.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

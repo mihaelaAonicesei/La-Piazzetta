@@ -35,18 +35,14 @@ namespace La_Piazzetta.Controllers
 
             return View();
         }
-        public ActionResult Reports()
-        {
-            ViewBag.Message = "Reports.";
 
-            return View();
-        }
         public ActionResult BA()
         {
             ViewBag.Message = "BA.";
 
             return View();
         }
+
         public ActionResult Help()
         {
             ViewBag.Message = "Help.";
