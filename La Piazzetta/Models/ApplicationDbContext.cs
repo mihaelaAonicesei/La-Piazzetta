@@ -28,6 +28,7 @@ namespace La_Piazzetta.Models
         public DbSet<Receipt> Receipts { get; set; }
         public DbSet<Vendors> Vendors { get; set; }
         public DbSet<Vote> Vote { get; set; }
+        public DbSet<Employee> Employee { get; set; }
 
         public static ApplicationDbContext Create()
         {

@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using La_Piazzetta.Managers;
 using La_Piazzetta.Models;
 using La_Piazzetta.ViewModels;
@@ -32,13 +34,9 @@ namespace La_Piazzetta.Handlers
             ingredientManager = new IngredientManager();
         }
 
-        public AllIngredientsViewModel GetAll()
+        public List<Ingredient> GetAll()
         {
-            var ingredients = ingredientManager.GetAll();
-            return new AllIngredientsViewModel
-            {
-                Ingredients = ingredients
-            };
+            return ingredientManager.GetAll().ToList();
         }
 
         public async Task AddIngredient(Ingredient ingredient)

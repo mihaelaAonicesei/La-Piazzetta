@@ -1,4 +1,5 @@
 ﻿@Styles.Render("~/Content/reports")
+
 <h2>Reports</h2>
 
 <div class="container">
@@ -12,11 +13,11 @@
                     </figure>
                     <h4 class="card-title">Vendors Report</h4>
                     <div class="card-text">
-                        Find useful information about vendors.
+                        Useful information about vendors.
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-info btn-sm">View report</button>
+                    <button onclick="location.href='@Url.Action("VendorsReport", "Reports")'" class="btn btn-info btn-sm">View report</button>
                 </div>
             </div>
         </div>
@@ -25,15 +26,15 @@
                 <img class="card-img-top" src="../../images/employee.png">
                 <div class="card-block">
                     <figure class="profile profile-inline">
-                        <img src="../../employee.png" class="profile-avatar" alt="">
+                        <img src="../../images/employee.png" class="profile-avatar" alt="">
                     </figure>
                     <h4 class="card-title">Employees Report</h4>
                     <div class="card-text">
-                        Find useful information about employees.
+                        Information about employees.
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-info btn-sm">View report</button>
+                    <button onclick="location.href='@Url.Action("EmployeesReport", "Reports")'" class="btn btn-info btn-sm">View report</button>
                 </div>
             </div>
         </div>
@@ -46,11 +47,11 @@
                     </figure>
                     <h4 class="card-title">Sales report</h4>
                     <div class="card-text">
-                        Find useful information about sales.
+                        Useful information about sales.
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-info btn-sm">View report</button>
+                    <button onclick="location.href='@Url.Action("SalesReport", "Reports")'" class="btn btn-info btn-sm">View report</button>
                 </div>
             </div>
         </div>
@@ -63,11 +64,11 @@
                     </figure>
                     <h4 class="card-title">Stock Report</h4>
                     <div class="card-text">
-                        Find useful information about stock.
+                        Useful information about stock.
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-info btn-sm">View report</button>
+                    <button onclick="location.href='@Url.Action("StockReport", "Reports")'" class="btn btn-info btn-sm">View report</button>
                 </div>
             </div>
         </div>

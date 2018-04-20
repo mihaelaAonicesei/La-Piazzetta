@@ -7,6 +7,8 @@
     <style rel="stylesheet" type="text/css" href="../../Content/products.css"></style>
     <style rel="stylesheet" type="text/css" href="../../Content/index.css"></style>
     <style rel="stylesheet" type="text/css" href="../../Content/reports.css"></style>
+    <link rel="stylesheet" type="text/css" href="../../Scripts/datatables.min.css" />
+
     @Styles.Render("~/Content/css")
 
     @RenderSection("Styles", false)
@@ -67,8 +69,8 @@
 
                     @if (User.IsInRole("Manager"))
                     {
-                        <li>@Html.ActionLink("BA", "Index", "BA")</li>
-                        <li>@Html.ActionLink("Reports", "Reports", "Home")</li>
+                        <li>@Html.ActionLink("BA", "BA", "Home")</li>
+                        <li>@Html.ActionLink("Reports", "Index", "Reports")</li>
                     }
 
                     <li>@Html.ActionLink("Help", "Help", "Home")</li>
@@ -94,9 +96,12 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js"></script>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript" src="~/Scripts/datatables.min.js"></script>
+
     <script src="/Scripts/custom/products.js"></script>
     <script src="/Scripts/custom/diy.js"></script>
     <script src="/Scripts/custom/payment.js"></script>
     <script src="/Scripts/custom/order.js"></script>
+    <script src="~/Scripts/custom/employeereport.js"></script>
 </body>
 </html>

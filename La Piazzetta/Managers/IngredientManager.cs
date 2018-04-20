@@ -11,7 +11,7 @@ namespace La_Piazzetta.Managers
         {
             using (var ctx = new ApplicationDbContext())
             {
-                return ctx.Ingredients.ToList();
+                return ctx.Ingredients.Include("Vendor").ToList();
             }
         }
 

@@ -219,9 +219,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\EmployeeHandler.cs" />
     <Compile Include="Handlers\BAHandler.cs" />
     <Compile Include="Handlers\ReceiptHandler.cs" />
     <Compile Include="Handlers\VendorHandler.cs" />
+    <Compile Include="Managers\EmployeeManager.cs" />
     <Compile Include="Managers\BAManager.cs" />
     <Compile Include="Managers\ReceiptManager.cs" />
     <Compile Include="Managers\VendorManager.cs" />
@@ -229,8 +231,21 @@
     <Compile Include="Migrations\201804190708283_abc.Designer.cs">
       <DependentUpon>201804190708283_abc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804201840029_addemployees.cs" />
+    <Compile Include="Migrations\201804201840029_addemployees.Designer.cs">
+      <DependentUpon>201804201840029_addemployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804201926404_addvendors.cs" />
+    <Compile Include="Migrations\201804201926404_addvendors.Designer.cs">
+      <DependentUpon>201804201926404_addvendors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804202026529_changeuseridinperson.cs" />
+    <Compile Include="Migrations\201804202026529_changeuseridinperson.Designer.cs">
+      <DependentUpon>201804202026529_changeuseridinperson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ApplicationDbContextInitializer.cs" />
     <Compile Include="Models\DIYViewModel.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\ProductsPageModel.cs" />
     <Compile Include="ViewModels\AllPackagesViewModel.cs" />
     <Compile Include="Handlers\IngredientHandler.cs" />
@@ -265,6 +280,7 @@
     <Compile Include="ViewModels\AllReceiptCommentsViewModel.cs" />
     <Compile Include="ViewModels\AllReceiptsViewModel.cs" />
     <Compile Include="ViewModels\AllVendorsViewModel.cs" />
+    <Compile Include="ViewModels\SalesReportModel.cs" />
     <Compile Include="ViewModels\Charts\ChartProductItem.cs" />
     <Compile Include="ViewModels\Charts\ChartProducts.cs" />
     <Compile Include="ViewModels\Charts\OrderChartData.cs" />
@@ -273,7 +289,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\reports.css" />
+    <Content Include="images\check.png" />
     <Content Include="images\employee.png" />
+    <Content Include="images\exclamation.png" />
     <Content Include="images\sales.jpg" />
     <Content Include="images\stock.png" />
     <Content Include="images\vendor.png" />
@@ -298,9 +316,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\custom\employeereport.js" />
     <Content Include="Scripts\custom\order.js" />
     <Content Include="Scripts\custom\payment.js" />
     <Content Include="Scripts\custom\products.js" />
+    <Content Include="Scripts\datatables.css" />
+    <Content Include="Scripts\datatables.js" />
+    <Content Include="Scripts\datatables.min.css" />
+    <Content Include="Scripts\datatables.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -354,10 +377,16 @@
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Home\Stock.cshtml" />
     <Content Include="Views\Vendor\Index.cshtml" />
+    <Content Include="Views\Home\BA.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\Shared\BigSlider.cshtml" />
     <Content Include="Views\Shared\SmallSlider.cshtml" />
     <Content Include="Views\DIY\PlaceOrder.cshtml" />
+    <Content Include="Views\Reports\Index.cshtml" />
+    <Content Include="Views\Reports\EmployeesReport.cshtml" />
+    <Content Include="Views\Reports\VendorsReport.cshtml" />
+    <Content Include="Views\Reports\StockReport.cshtml" />
+    <Content Include="Views\Reports\SalesReport.cshtml" />
     <Content Include="Views\Reports\Reports.cshtml" />
     <Content Include="Views\BA\BA.cshtml" />
     <Content Include="Views\BA\ProductsChart.cshtml" />
@@ -381,6 +410,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804190708283_abc.resx">
       <DependentUpon>201804190708283_abc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804201840029_addemployees.resx">
+      <DependentUpon>201804201840029_addemployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804201926404_addvendors.resx">
+      <DependentUpon>201804201926404_addvendors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804202026529_changeuseridinperson.resx">
+      <DependentUpon>201804202026529_changeuseridinperson.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

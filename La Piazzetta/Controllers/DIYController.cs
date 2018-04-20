@@ -13,7 +13,7 @@ namespace La_Piazzetta.Controllers
         public ActionResult DIY()
         {
             var model = new DIYViewModel();
-            model.Ingredients = IngredientHandler.Instance.GetAll().Ingredients.ToList();
+            model.Ingredients = IngredientHandler.Instance.GetAll().ToList();
             return View(model);
         }
 

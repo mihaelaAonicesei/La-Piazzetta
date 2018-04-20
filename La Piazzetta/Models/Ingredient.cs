@@ -14,5 +14,7 @@ namespace La_Piazzetta.Models
         public string MeasureUnit { get; set; }
         public virtual List<Product> Products { get; set; }
         public virtual List<Receipt> Receipts { get; set; }
+        public int VendorId { get; set; }
+        public Vendors Vendor { get; set; }
     }
 }
