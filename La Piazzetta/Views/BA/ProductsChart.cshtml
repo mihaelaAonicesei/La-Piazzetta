@@ -1,8 +1,6 @@
-﻿@model La_Piazzetta.ViewModels.Charts.OrderChartData
+﻿@model La_Piazzetta.ViewModels.Charts.OrderData
 
-<div style="min-width:635px;min-height:317px;">
     <canvas id="myChart"></canvas>
-</div>
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")
 
@@ -11,7 +9,7 @@
 
     var dataItems = [];
     var dataValues = [];
-    @foreach (var item in Model.Items)
+    @foreach (var item in Model.ChartProductItems)
     {
         @:dataItems.push("@item.Name");
         @:dataValues.push(@item.Value);

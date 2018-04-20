@@ -2,6 +2,8 @@
 {
     public class ChartProducts
     {
-        public OrderChartData OrderData { get; set; }
+        public OrderData OrderData { get; set; }
+
+        public OrderData IngredientsData { get; set; }
     }
 }

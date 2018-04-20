@@ -1,5 +1,6 @@
 ﻿using La_Piazzetta.Managers;
 using La_Piazzetta.ViewModels.Charts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -35,6 +36,11 @@ namespace La_Piazzetta.Handlers
         public List<ChartProductItem> GetTop5Items()
         {
             return baManager.GetTop5Items().ToList();
+        }
+
+        public ICollection<ChartProductItem> GetIngredients()
+        {
+            return baManager.GetIngredients();
         }
     }
 }

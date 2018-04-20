@@ -9,24 +9,20 @@ namespace La_Piazzetta.Controllers
         // GET: BA
         public ActionResult Index()
         {
-            var temp = new OrderChartData
+            var orderData = new OrderData
             {
-                //Items = new List<ChartProductItem>{
-                //    new ChartProductItem
-                //    {
-                //        Name = "v1"
-                //    },
-                //    new ChartProductItem
-                //    {
-                //        Name = "v2"
-                //    }
-                //}
-                Items = BAHandler.Instance.GetTop5Items()
+                ChartProductItems = BAHandler.Instance.GetTop5Items()
+            };
+
+            var productData = new OrderData
+            {
+                ChartProductItems = BAHandler.Instance.GetIngredients()
             };
 
             var model = new ChartProducts
             {
-                OrderData = temp
+                OrderData = orderData,
+                IngredientsData = productData
             };
 
             return View("BA", model);

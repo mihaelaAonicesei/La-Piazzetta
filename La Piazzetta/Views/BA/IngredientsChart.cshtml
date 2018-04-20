@@ -1,0 +1,45 @@
+﻿@model La_Piazzetta.ViewModels.Charts.OrderData
+
+<canvas id="doughnutChart"></canvas>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+<script>
+    var dataLabels = [];
+    var dataColors = [];
+    var dataValues = [];
+    @foreach(var item in Model.ChartProductItems)
+    {
+        @:dataLabels.push("@item.Name");
+        @:dataColors.push(getRandomColor());
+        @:dataValues.push(@item.Value);
+    }
+
+    var ctxD = document.getElementById("doughnutChart").getContext('2d');
+    var myLineChart = new Chart(ctxD, {
+        type: 'doughnut',
+        data: {
+            labels: dataLabels,
+            datasets: [
+                {
+                    data: dataValues,
+                    backgroundColor: dataColors,
+                    hoverBackgroundColor: dataColors
+                }
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+</script>

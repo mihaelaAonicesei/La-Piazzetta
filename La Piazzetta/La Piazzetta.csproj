@@ -283,7 +283,7 @@
     <Compile Include="ViewModels\SalesReportModel.cs" />
     <Compile Include="ViewModels\Charts\ChartProductItem.cs" />
     <Compile Include="ViewModels\Charts\ChartProducts.cs" />
-    <Compile Include="ViewModels\Charts\OrderChartData.cs" />
+    <Compile Include="ViewModels\Charts\ChartsData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -390,6 +390,7 @@
     <Content Include="Views\Reports\Reports.cshtml" />
     <Content Include="Views\BA\BA.cshtml" />
     <Content Include="Views\BA\ProductsChart.cshtml" />
+    <Content Include="Views\BA\IngredientsChart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
